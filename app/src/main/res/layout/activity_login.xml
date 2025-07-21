@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/tvOtpHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTP Verification"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/abeezee_regular"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp"/>
+
+    <!-- Subheading -->
+    <TextView
+        android:id="@+id/tvOtpSubheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We have sent you an one time password to your mobile number"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvOtpHeading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Phone input with +91 prefix -->
+    <LinearLayout
+        android:id="@+id/llPhoneInput"
+        android:layout_width="300dp"
+        android:layout_height="51dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_rounded_gray"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvOtpSubheading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91"
+            android:textSize="18sp"
+            android:textColor="#888888"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Enter your number"
+            android:inputType="phone"
+            android:background="@android:color/transparent"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:textSize="18sp"
+            android:paddingEnd="16dp"/>
+    </LinearLayout>
+
+    <!-- Send OTP Button -->
+    <Button
+        android:id="@+id/btnSendOtp"
+        android:layout_width="200dp"
+        android:layout_height="51dp"
+        android:text="Send OTP"
+        android:background="@drawable/bg_rounded_green"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:elevation="10dp"
+        app:layout_constraintTop_toBottomOf="@id/llPhoneInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:visibility="visible"/>
+
+    <!-- OTP boxes -->
+    <LinearLayout
+        android:id="@+id/llOtpBoxes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvOtpSubheading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:visibility="gone">
+
+        <EditText android:id="@+id/etOtp1" android:layout_width="44dp" android:layout_height="44dp" android:layout_margin="6dp" android:background="@drawable/bg_rounded_gray" android:gravity="center" android:textColor="#000000" android:textSize="20sp" android:maxLength="1" android:inputType="number" />
+        <EditText android:id="@+id/etOtp2" android:layout_width="44dp" android:layout_height="44dp" android:layout_margin="6dp" android:background="@drawable/bg_rounded_gray" android:gravity="center" android:textColor="#000000" android:textSize="20sp" android:maxLength="1" android:inputType="number" />
+        <EditText android:id="@+id/etOtp3" android:layout_width="44dp" android:layout_height="44dp" android:layout_margin="6dp" android:background="@drawable/bg_rounded_gray" android:gravity="center" android:textColor="#000000" android:textSize="20sp" android:maxLength="1" android:inputType="number" />
+        <EditText android:id="@+id/etOtp4" android:layout_width="44dp" android:layout_height="44dp" android:layout_margin="6dp" android:background="@drawable/bg_rounded_gray" android:gravity="center" android:textColor="#000000" android:textSize="20sp" android:maxLength="1" android:inputType="number" />
+        <EditText android:id="@+id/etOtp5" android:layout_width="44dp" android:layout_height="44dp" android:layout_margin="6dp" android:background="@drawable/bg_rounded_gray" android:gravity="center" android:textColor="#000000" android:textSize="20sp" android:maxLength="1" android:inputType="number" />
+        <EditText android:id="@+id/etOtp6" android:layout_width="44dp" android:layout_height="44dp" android:layout_margin="6dp" android:background="@drawable/bg_rounded_gray" android:gravity="center" android:textColor="#000000" android:textSize="20sp" android:maxLength="1" android:inputType="number" />
+    </LinearLayout>
+
+    <!-- Verify & Proceed Button -->
+    <Button
+        android:id="@+id/btnVerifyProceed"
+        android:layout_width="200dp"
+        android:layout_height="51dp"
+        android:text="Verify &amp; Proceed"
+        android:background="@drawable/bg_rounded_green"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:elevation="10dp"
+        app:layout_constraintTop_toBottomOf="@id/llOtpBoxes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

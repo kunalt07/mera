@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "251789152990",
+    "project_id": "mera-a5ea9",
+    "storage_bucket": "mera-a5ea9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251789152990:android:547b9db4cedd62fd68a84f",
+        "android_client_info": {
+          "package_name": "com.example.meraapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-YNxYvVxP7IZIAKXKmbEmv0OMXLAAYco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
