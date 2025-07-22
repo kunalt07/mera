@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFFFA">
+
+    <!-- Title -->
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/abeezee_regular"
+        android:textColor="#222222"
+        android:textColorHint="#888888"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"/>
+
+    <!-- Category and Add Photo Buttons -->
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/etTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="+ Category"
+            android:background="@drawable/bg_rounded_grey_placeholder"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            android:layout_marginEnd="12dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:backgroundTint="@null"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="+ Add Photo"
+            android:background="@drawable/bg_rounded_grey_placeholder"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:backgroundTint="@null"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivSelectedPhoto"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_rounded_grey_placeholder"
+        app:layout_constraintTop_toBottomOf="@id/llButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- Description -->
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:textSize="18sp"
+        android:textColor="#222222"
+        android:textColorHint="#888888"
+        android:background="@android:color/transparent"
+        android:minLines="5"
+        app:layout_constraintTop_toBottomOf="@id/llButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"/>
+
+    <!-- Post Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPost"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:text="Post"
+        android:background="@drawable/bg_rounded_green"
+        android:backgroundTint="@null"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

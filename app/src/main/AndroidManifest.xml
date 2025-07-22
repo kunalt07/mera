@@ -23,6 +23,14 @@
         <activity android:name=".LocationRequestActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".OtpActivity" />
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".EditLocationActivity" />
+        <activity android:name=".FileComplaintActivity" />
+        <activity android:name=".SelectCategoryActivity" />
+        <activity android:name=".PostDetailActivity" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY_HERE"/>
         
     </application>
 

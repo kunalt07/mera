@@ -121,6 +121,8 @@ class LoginActivity : AppCompatActivity() {
                     btnSendOtp.visibility = View.GONE
                     llOtpBoxes.visibility = View.VISIBLE
                     btnVerifyProceed.visibility = View.VISIBLE
+                    val tvOtpSubheading = findViewById<TextView>(R.id.tvOtpSubheading)
+                    tvOtpSubheading.text = "Please Enter the OTP generated to your Registered Mobile Number"
                 }
             })
             .build()
@@ -145,7 +147,9 @@ class LoginActivity : AppCompatActivity() {
                 progressDialog.dismiss()
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
-                    // TODO: Proceed to main app screen
+                    val intent = android.content.Intent(this, DashboardActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 } else {
                     Toast.makeText(this, "Login failed: ${task.exception?.message}", Toast.LENGTH_LONG).show()
                 }
